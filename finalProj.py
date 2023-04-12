@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-def get_amazon_toy_link(search_term):
+def get_amazon_link(search_term):
     base_url = "https://www.amazon.com"
     search_url = f"{base_url}/s?field-keywords={search_term}"
 
@@ -28,8 +28,8 @@ def get_amazon_toy_link(search_term):
 
 if __name__ == "__main__":
     search_term = "apple pen"
-    toy_link = get_amazon_toy_link(search_term)
-    if toy_link:
-        print(f"Amazon toy link: {toy_link}")
+    link = get_amazon_link(search_term)
+    if link:
+        print(f"Amazon link: {link}")
     else:
-        print("No toy found.")
+        print("No link found.")
