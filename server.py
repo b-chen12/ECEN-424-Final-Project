@@ -16,7 +16,7 @@ def get_amazon_link(search_term):
 
     response = requests.get(search_url, headers=headers)
     soup = BeautifulSoup(response.content, "html.parser")
-    search_result = soup.find("div", {"data-index": "0"})
+    search_result = soup.find("div", {"data-index": "5"})
     if search_result:
         link = search_result.find("a", class_="a-link-normal")
         if link:
